@@ -6594,7 +6594,10 @@ function getRandomColor() {
   ];
 
   // Your code below
-
+  console.log(randomColor);
+  document.querySelector("body").style.backgroundColor = randomColor;
+  document.querySelector("body").style.color = randomColor;
+  document.querySelector(".button").style.backgroundColor = randomColor;
   // Your code above
 }
 
@@ -6604,10 +6607,15 @@ function getRandomQuote() {
   ];
 
   // Your code below
-
+  document.getElementById('text').textContent = randomQuote.text;
+  document.getElementById('author').textContent = randomQuote.author;
   // Your code above
 }
 
 // Your code below
-
+document.getElementById('new-quote').addEventListener('click', () => {
+  this.location.reload();
+})
+getRandomColor();
+getRandomQuote();
 // Your code above
